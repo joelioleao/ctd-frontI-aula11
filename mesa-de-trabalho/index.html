@@ -1,17 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
     <title>Mesa de trabalho</title>
     <style type="text/css">
         /* Adicione o código fonte de estilização */
+        * {
+            margin: 0;
+            text-align: center;
 
+        }
+
+        body {
+            font-family: 'Shippori Antique', sans-serif;
+            font-weight: 100;
+        }
+
+        span {
+            color: blue;
+        }
+
+        .conteudo {
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 25px 25px;
+            margin: 100px auto;
+            max-width: 480px;
+        }
+
+        .conteudo h1 {
+            text-align: left;
+        }
+
+        .formulario__nome {
+            display: block;
+        }
+
+        .formulario__grupo {
+            margin: 10px 0;
+            text-align: center;
+
+        }
+
+        .formulario__grupo button {
+            margin: 10px 0;
+            background-color: rgb(255, 208, 0);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .formulario__rotulo {
+            display: block;
+            text-align: left;
+        }
+
+        .fomulario__campo {
+            width: 100%;
+            height: 25px;
+        }
+
+        #p {
+            text-align: left;
+        }
     </style>
 </head>
+
 <body>
     <!-- Adicione o código fonte da estrutura HTML -->
+    <article class="conteudo">
+        <img src="imagens/logo-amazon.PNG" class="icones">
+        <h1 class="conteudo_titulo">Criar conta</h1>
+        <form class="formulario" action="https://api.ctd/cadastrar" method="POST">
+
+            <div class="formulario__grupo">
+                <label class="formulario__rotulo" for="nome">Seu nome</label>
+                <input class="fomulario__campo" name="name" id="nome" type="text" required>
+            </div>
+
+            <div class="formulio__celular_mail">
+                <label class="formulario__rotulo" for="celular_mail">Número de celular ou e-mail</label>
+                <input class="fomulario__campo" name="celular_mail" id="celular_mail" type="text" required>
+            </div>
+
+            <div class="formulario__grupo">
+                <label class="formulario__rotulo" for="senha">Senha</label>
+                <input class="fomulario__campo" senha="senha" minlenght="6" id="senha" type="password" required>
+            </div>
+            <img src="./imagens/icone.png" alt="Ícone de informação">
+            <p>As senhas devem ter pelo menos 6 caracteres.</p>
+            <div class="formulario__grupo">
+                <label class="formulario__rotulo" for="confirmacao_senha">Insira a senha nova mais uma vez</label>
+                <input class="fomulario__campo" senha="senha" minlenght="6" id="confirmacaosenha" type="password"
+                    required>
+            </div>
+
+            <div class="formulario__grupo">
+                <button type="submit">Continuar</button>
+            </div>
+
+            <p id="p">Ao criar uma conta, você concorda com as <span>Condições de Uso</span> da Amazon. Por favor
+                verifique a <span>Notificação de Privacidade, Notificação de Cookies e a Notificação de Anúncios
+                    Baseados em Interesse</span>. </p>
+            <hr>
+            <p id="p">Você já tem uma conta? <span>Fazer login</span><img src="./imagens/icone2.PNG" alt="Ícone seta">
+            </p>
+        </form>
+    </article>
 
 </body>
+
 </html>
